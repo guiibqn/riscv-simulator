@@ -36,5 +36,5 @@ Pré-requisito: Compilador `g++` (MinGW ou GCC).
     ./main.exe | Tee-Object -FilePath "relatorio_simulacao.txt"
 
 Autores
-Guilherme Augusto Boquimpani
+Guilherme Augusto Boquimpani,
 Felipe Francisco Ferreira de Lima

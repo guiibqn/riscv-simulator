@@ -1,0 +1,13 @@
+# Ignorar executáveis e objetos compilados
+*.exe
+*.o
+*.obj
+*.dll
+
+# Ignorar arquivos de IDE
+.vscode/
+.idea/
+
+# Ignorar arquivos temporários
+*.log
+*.tmp

@@ -24,9 +24,13 @@ O código foi estruturado de forma modular para espelhar os componentes físicos
 
 ## 👩🏽‍💻 O Processo de Desenvolvimento
 Comecei o projeto focando no coração do simulador: a CPU. Estruturei o ciclo básico de **Busca (Fetch), Decodificação (Decode) e Execução (Execute)** para que o processador conseguisse ler uma instrução simples e processá-la.
+
 Em seguida, o desafio foi implementar a ISA RV32I completa, garantindo que todas as operações aritméticas, lógicas e de desvio (branches) manipulassem corretamente os 32 registradores internos. 
+
 Com a CPU funcionando, o próximo passo foi arquitetar a Memória RAM. Precisei criar um mapeamento rígido para separar a RAM Principal (onde ficam os dados e a pilha), a VRAM (área de vídeo) e o espaço reservado para periféricos.
+
 Por fim, para unir tudo, desenvolvi o Barramento (Bus). Essa foi uma fase crítica, pois precisei garantir que a comunicação de Dados, Endereços e Sinais de Controle entre a CPU e a Memória ocorresse de forma sincronizada e sem vazamento de dados. 
+
 Documentar e testar cada um desses módulos separadamente com algoritmos em Assembly (como Fibonacci) foi o que garantiu o sucesso da simulação.
 
 ## 📚 O Que Eu Aprendi

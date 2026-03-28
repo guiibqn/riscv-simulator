@@ -22,11 +22,27 @@ O código foi estruturado de forma modular para espelhar os componentes físicos
 - `/memory`: Gerenciamento da memória RAM, mapeamento de endereços e Barramento (Bus).
 - `/peripherals`: Simulação de entrada e saída (I/O).
 
-## 🧠 O que aprendemos
-Construir este simulador do zero foi um mergulho profundo em arquitetura de computadores. Os maiores aprendizados incluíram:
-- Como manipular operações *bitwise* em C++ para decodificar instruções binárias.
-- A mecânica exata de como a CPU interage com a memória através de barramentos limitados.
-- O funcionamento do ciclo de *clock* e como os registradores mantêm o estado do programa.
+## 👩🏽‍💻 O Processo de Desenvolvimento
+Comecei o projeto focando no coração do simulador: a CPU. Estruturei o ciclo básico de **Busca (Fetch), Decodificação (Decode) e Execução (Execute)** para que o processador conseguisse ler uma instrução simples e processá-la.
+Em seguida, o desafio foi implementar a ISA RV32I completa, garantindo que todas as operações aritméticas, lógicas e de desvio (branches) manipulassem corretamente os 32 registradores internos. 
+Com a CPU funcionando, o próximo passo foi arquitetar a Memória RAM. Precisei criar um mapeamento rígido para separar a RAM Principal (onde ficam os dados e a pilha), a VRAM (área de vídeo) e o espaço reservado para periféricos.
+Por fim, para unir tudo, desenvolvi o Barramento (Bus). Essa foi uma fase crítica, pois precisei garantir que a comunicação de Dados, Endereços e Sinais de Controle entre a CPU e a Memória ocorresse de forma sincronizada e sem vazamento de dados. 
+Documentar e testar cada um desses módulos separadamente com algoritmos em Assembly (como Fibonacci) foi o que garantiu o sucesso da simulação.
+
+## 📚 O Que Eu Aprendi
+Durante este projeto, saí da teoria da faculdade e mergulhei em desafios complexos de engenharia de software e baixo nível.
+
+🧠 **Manipulação de Bits (Bitwise Operations):**
+- **Lógica Avançada:** Aprendi a utilizar máscaras de bits (bit masking) e deslocamentos (shifts) em C++ para extrair *opcodes*, *funct3* e *funct7* de instruções binárias de 32 bits de forma extremamente eficiente.
+
+🏗️ **Arquitetura e Fluxo de Dados:**
+- **Visão Sistêmica:** Entender na prática como um gargalo no barramento afeta a CPU me deu uma visão muito mais clara sobre otimização de software e alocação de memória. 
+
+🧮 **Tradução de Baixo para Alto Nível:**
+- **Ponteiros e Referências:** Aprimorei muito meu domínio em C++ ao gerenciar o estado da memória e dos registradores, simulando o comportamento exato de um hardware físico via código.
+
+⚙️ **Modularização de Código:**
+- **Clean Code em C++:** Como o projeto cresceu rápido, aprendi a separar responsabilidades (CPU, Memory, Bus) em classes e módulos distintos, tornando o código escalável para adicionar novas instruções no futuro.
 
 ## 🚀 Próximos Passos (Melhorias Futuras)
 - Implementar suporte a **Memória Cache** (com políticas de substituição).
@@ -49,6 +65,7 @@ g++ main.cpp -o maiN
 ```bash
     .\main.exe
 ```
+Dica: Para salvar a saída da execução em um arquivo de texto, utilize: ```bash ./main.exe | Tee-Object -FilePath "relatorio_simulacao.txt"```
 
 ## Autores
 Guilherme Augusto Boquimpani,

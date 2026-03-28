@@ -38,16 +38,15 @@ Construir este simulador do zero foi um mergulho profundo em arquitetura de comp
 Pré-requisito: Compilador `g++` (MinGW ou GCC) instalado.
 
 1. Clone o repositório:
-
-git clone [https://github.com/guiibqn/riscv-simulator.git](https://github.com/guiibqn/riscv-simulator.git)
-
+  ```bash git clone [https://github.com/guiibqn/riscv-simulator.git](https://github.com/guiibqn/riscv-simulator.git)```
 2. Compile o código (exemplo via terminal):
-    ```bash
-   g++ main.cpp -o main
-
+```bash
+g++ main.cpp -o maiN
+```
 3. Execute o simulador:
-    ```bash
+```bash
     .\main.exe
+```
 
 ## Autores
 Guilherme Augusto Boquimpani,
